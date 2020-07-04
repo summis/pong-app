@@ -1,6 +1,6 @@
 <?php
   $views = 0;
-  $file = "counter.txt";
+  $file = "data/counter.txt";
   if (file_exists($file))
   {
       $views = (int)file_get_contents($file);
