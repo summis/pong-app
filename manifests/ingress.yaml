@@ -8,7 +8,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /foo
+      - path: /pingpong
         backend:
           serviceName: pong-app-svc
           servicePort: http
