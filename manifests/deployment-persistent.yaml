@@ -12,6 +12,13 @@ spec:
       labels:
         app: pong-app
     spec:
+      volumes: # Define volume
+        - name: counter
+          persistentVolumeClaim:
+            claimName: main-app-claim
       containers:
         - name: pong-app
           image: summila/pong-app:v0.2
+          volumeMounts: # Mount volume
+          - name: counter
+            mountPath: /var/www/html/data
